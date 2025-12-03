@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paradigm Ltd - Client Feedback Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark/80 dark:backdrop-blur-sm p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-gray-200 dark:bg-white/10">
+<span class="material-symbols-outlined text-gray-800 dark:text-white">insights</span>
+</div>
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Paradigm Ltd</h1>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-gray-800 dark:text-white">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</header>
+<main class="flex-1 p-4 pb-8 space-y-6">
+<!-- Headline Text -->
+<h2 class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">Client Feedback Dashboard</h2>
+<!-- Chips / Filters -->
+<div class="flex gap-3 overflow-x-auto pb-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/20 pl-4 pr-2 text-primary dark:text-white">
+<p class="text-sm font-semibold leading-normal">Date Range</p>
+<span class="material-symbols-outlined text-lg">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-white/10 pl-4 pr-2 text-gray-800 dark:text-white/80">
+<p class="text-sm font-semibold leading-normal">Client/Event</p>
+<span class="material-symbols-outlined text-lg">arrow_drop_down</span>
+</button>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+<p class="text-gray-600 dark:text-gray-400 text-sm font-medium leading-normal">Avg Rating</p>
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">4.5/5</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+<p class="text-gray-600 dark:text-gray-400 text-sm font-medium leading-normal">Avg NPS</p>
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">+52</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+<p class="text-gray-600 dark:text-gray-400 text-sm font-medium leading-normal">Responses</p>
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">1,284</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+<p class="text-gray-600 dark:text-gray-400 text-sm font-medium leading-normal">Promoter %</p>
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">75%</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="space-y-6">
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<p class="text-gray-800 dark:text-white text-base font-semibold leading-normal">Avg satisfaction over time</p>
+<div class="flex items-end gap-2">
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">4.5</p>
+<p class="text-green-500 text-base font-medium leading-normal pb-1">+5.2%</p>
+</div>
+<div class="flex h-40 flex-col py-4">
+<svg fill="none" preserveaspectratio="none" viewbox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_chart)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#137fec" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_chart" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#137fec" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#137fec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between -mt-4">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">Jan</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">Feb</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">Mar</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">Apr</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">May</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold">Jun</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<p class="text-gray-800 dark:text-white text-base font-semibold leading-normal">Feedback by rating</p>
+<div class="flex items-center justify-center h-48 py-4">
+<div class="relative w-40 h-40">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path class="stroke-current text-gray-200 dark:text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+<path class="stroke-current text-red-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="10, 100" stroke-linecap="round" stroke-width="3"></path>
+<path class="stroke-current text-yellow-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="20, 100" stroke-linecap="round" stroke-width="3" transform="rotate(36 18 18)"></path>
+<path class="stroke-current text-green-400" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="30, 100" stroke-linecap="round" stroke-width="3" transform="rotate(108 18 18)"></path>
+<path class="stroke-current text-green-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="40, 100" stroke-linecap="round" stroke-width="3" transform="rotate(216 18 18)"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<p class="text-gray-900 dark:text-white text-3xl font-bold">1,284</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Total</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<p class="text-gray-800 dark:text-white text-base font-semibold leading-normal">Avg rating by event type</p>
+<div class="flex items-end gap-2">
+<p class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">4.5</p>
+<p class="text-red-500 text-base font-medium leading-normal pb-1">-1.5%</p>
+</div>
+<div class="grid gap-4 py-3">
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Corporate</p>
+<div class="h-2 rounded-full bg-gray-200 dark:bg-white/10"><div class="bg-primary h-2 rounded-full" style="width: 90%;"></div></div>
+<p class="text-gray-800 dark:text-white font-semibold text-sm">4.8</p>
+</div>
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Wedding</p>
+<div class="h-2 rounded-full bg-gray-200 dark:bg-white/10"><div class="bg-primary h-2 rounded-full" style="width: 82%;"></div></div>
+<p class="text-gray-800 dark:text-white font-semibold text-sm">4.6</p>
+</div>
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Conference</p>
+<div class="h-2 rounded-full bg-gray-200 dark:bg-white/10"><div class="bg-primary h-2 rounded-full" style="width: 70%;"></div></div>
+<p class="text-gray-800 dark:text-white font-semibold text-sm">3.9</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Recurring Themes -->
+<div class="space-y-3">
+<h3 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">Top recurring themes</h3>
+<div class="flex flex-wrap gap-2">
+<span class="inline-block rounded-full bg-primary/20 text-primary dark:text-white px-3 py-1 text-sm font-medium">Logistics</span>
+<span class="inline-block rounded-full bg-primary/20 text-primary dark:text-white px-3 py-1 text-sm font-medium">Communication</span>
+<span class="inline-block rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white/80 px-3 py-1 text-sm font-medium">Catering</span>
+<span class="inline-block rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white/80 px-3 py-1 text-sm font-medium">Venue</span>
+<span class="inline-block rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white/80 px-3 py-1 text-sm font-medium">Staff</span>
+</div>
+</div>
+<!-- Individual Feedback Table -->
+<div class="space-y-4">
+<h3 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">Individual Feedback</h3>
+<div class="space-y-3">
+<div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white font-semibold">Gala Event - Innovate Inc.</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Jan 15, 2024</p>
+</div>
+<span class="text-xs font-bold leading-none uppercase tracking-wide rounded-full px-2.5 py-1.5 bg-red-500/20 text-red-500 dark:text-red-400">New</span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-yellow-500">star</span>
+<span class="font-semibold text-gray-800 dark:text-white">4/5</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-medium text-gray-500 dark:text-gray-400">NPS:</span>
+<span class="font-semibold text-green-500">+65</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">"The team was fantastic, but the catering service was a bit slow during the main course..."</p>
+</div>
+<div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white font-semibold">Annual Conference - TechCorp</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Jan 12, 2024</p>
+</div>
+<span class="text-xs font-bold leading-none uppercase tracking-wide rounded-full px-2.5 py-1.5 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400">In Review</span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-yellow-500">star</span>
+<span class="font-semibold text-gray-800 dark:text-white">5/5</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-medium text-gray-500 dark:text-gray-400">NPS:</span>
+<span class="font-semibold text-green-500">+80</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">"Absolutely seamless experience. The communication leading up to the event was top-notch."</p>
+</div>
+<div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-white/10 p-4 bg-gray-100 dark:bg-white/5">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white font-semibold">Product Launch - FinSolutions</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Jan 10, 2024</p>
+</div>
+<span class="text-xs font-bold leading-none uppercase tracking-wide rounded-full px-2.5 py-1.5 bg-green-500/20 text-green-600 dark:text-green-400">Resolved</span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-yellow-500">star</span>
+<span class="font-semibold text-gray-800 dark:text-white">3/5</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-medium text-gray-500 dark:text-gray-400">NPS:</span>
+<span class="font-semibold text-red-500">-20</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">"Venue was smaller than expected and the AV equipment had some technical issues."</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

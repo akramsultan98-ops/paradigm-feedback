@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paradigm Post-Event Feedback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-white/10">
+  <!-- Left side: Back arrow -->
+  <div class="text-gray-800 dark:text-white flex size-12 shrink-0 items-center justify-start">
+    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+  </div>
+
+  <!-- Center: Logo only -->
+  <div class="flex flex-1 flex-col items-center justify-center gap-1">
+    <img src="Asset 193.png" alt="Paradigm Ltd Logo" class="h-14 w-auto" />
+  </div>
+
+  <!-- Right spacer -->
+  <div class="flex size-12 shrink-0 items-center"></div>
+</div>
+
+
+<main class="flex-grow px-4 py-6">
+<!-- Headline -->
+<h1 class="text-gray-900 dark:text-white tracking-light text-[32px] font-bold leading-tight text-center pb-3 pt-2">Paradigm Post-Event Feedback</h1>
+<!-- Body Text -->
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal pb-6 text-center">
+                Thank you for your partnership. Your feedback is valuable and helps us improve our services.
+            </p>
+<!-- Form Card -->
+<div class="bg-white dark:bg-[#192633] rounded-xl p-6 space-y-6">
+<!-- Company -->
+<div class="flex flex-col">
+<label class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2" for="company-name">Company / Organization</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#324d67] bg-gray-50 dark:bg-[#101922] focus:border-primary h-12 placeholder:text-gray-400 dark:placeholder:text-[#92adc9] px-4 text-base font-normal leading-normal" id="company-name" placeholder="Enter your company name" type="text"/>
+</div>
+<!-- Event Name (free text) -->
+<div class="flex flex-col">
+  <label class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2" for="event-name">
+    Event Name
+  </label>
+  <input
+    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#324d67] bg-gray-50 dark:bg-[#101922] focus:border-primary h-12 placeholder:text-gray-400 dark:placeholder:text-[#92adc9] px-4 text-base font-normal leading-normal"
+    id="event-name"
+    type="text"
+    placeholder="Write the event name (e.g. Egypt-Spain Business Forum 2025)"
+  />
+</div>
+
+<!-- Event Date Picker -->
+<div class="flex flex-col">
+<label class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2" for="event-date">Event Date</label>
+<div class="relative">
+<input class="form-input w-full rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#324d67] bg-gray-50 dark:bg-[#101922] focus:border-primary h-12 px-4 text-base font-normal leading-normal" id="event-date" type="date"/>
+</div>
+</div>
+<!-- Overall Event Rating (Stars) -->
+<div class="flex flex-col">
+  <p class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2">
+    Overall Event Rating
+  </p>
+  <div class="flex items-center gap-2">
+    <label class="cursor-pointer">
+      <input type="radio" name="overall_rating" value="1" class="hidden peer" />
+      <span class="material-symbols-outlined text-3xl text-gray-400 peer-checked:text-yellow-400">
+        star
+      </span>
+    </label>
+    <label class="cursor-pointer">
+      <input type="radio" name="overall_rating" value="2" class="hidden peer" />
+      <span class="material-symbols-outlined text-3xl text-gray-400 peer-checked:text-yellow-400">
+        star
+      </span>
+    </label>
+    <label class="cursor-pointer">
+      <input type="radio" name="overall_rating" value="3" class="hidden peer" />
+      <span class="material-symbols-outlined text-3xl text-gray-400 peer-checked:text-yellow-400">
+        star
+      </span>
+    </label>
+    <label class="cursor-pointer">
+      <input type="radio" name="overall_rating" value="4" class="hidden peer" />
+      <span class="material-symbols-outlined text-3xl text-gray-400 peer-checked:text-yellow-400">
+        star
+      </span>
+    </label>
+    <label class="cursor-pointer">
+      <input type="radio" name="overall_rating" value="5" class="hidden peer" />
+      <span class="material-symbols-outlined text-3xl text-gray-400 peer-checked:text-yellow-400">
+        star
+      </span>
+    </label>
+  </div>
+</div>
+
+<!-- Satisfaction Rating -->
+<div class="flex flex-col">
+  <p class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-3">
+    How satisfied were you with the event overall?
+  </p>
+  <div class="flex justify-between items-center gap-2">
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="event_satisfaction" value="1" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">1</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="event_satisfaction" value="2" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">2</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="event_satisfaction" value="3" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">3</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="event_satisfaction" value="4" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">4</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="event_satisfaction" value="5" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">5</span>
+    </label>
+  </div>
+</div>
+
+<!-- Service Quality Rating -->
+<div class="flex flex-col">
+  <p class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-3">
+    How would you rate the quality of our services?
+  </p>
+  <div class="flex justify-between items-center gap-2">
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="service_quality" value="1" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">1</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="service_quality" value="2" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">2</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="service_quality" value="3" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">3</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="service_quality" value="4" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">4</span>
+    </label>
+    <label class="flex items-center justify-center size-10 rounded-full border border-gray-300 dark:border-[#324d67] text-gray-600 dark:text-gray-300 cursor-pointer">
+      <input type="radio" name="service_quality" value="5" class="hidden peer" />
+      <span class="peer-checked:font-semibold peer-checked:text-primary">5</span>
+    </label>
+  </div>
+</div>
+
+<!-- What did we do well? -->
+<div class="flex flex-col">
+<label class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2" for="feedback-positive">What did we do well?</label>
+<textarea class="form-textarea w-full rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#324d67] bg-gray-50 dark:bg-[#101922] focus:border-primary p-4 text-base font-normal leading-normal" id="feedback-positive" placeholder="Tell us what you liked..." rows="4"></textarea>
+</div>
+<!-- What can we improve? -->
+<div class="flex flex-col">
+<label class="text-gray-800 dark:text-white text-base font-medium leading-normal pb-2" for="feedback-improvement">What can we improve next time?</label>
+<textarea class="form-textarea w-full rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#324d67] bg-gray-50 dark:bg-[#101922] focus:border-primary p-4 text-base font-normal leading-normal" id="feedback-improvement" placeholder="Any suggestions for improvement?" rows="4"></textarea>
+</div>
+<!-- Follow-up checkbox -->
+<div class="flex items-center gap-3">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 border-gray-300 dark:bg-[#324d67] dark:border-[#4b6a8a] focus:ring-primary" id="follow-up" type="checkbox"/>
+<label class="text-gray-800 dark:text-white text-base font-normal" for="follow-up">I would like to be contacted for a follow-up discussion.</label>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-8 pb-4">
+  <button
+    type="button"
+    class="w-full bg-primary text-white font-bold text-base h-12 rounded-lg flex items-center justify-center"
+    onclick="window.location.href='thank-you.html';"
+  >
+    Submit Feedback
+  </button>
+</div>
+</main>
+</div>
+</body></html>
